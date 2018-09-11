@@ -11,4 +11,11 @@ public class Turma {
     public void setAlunos(Collection<Aluno> alunos) {
         this.alunos = alunos;
     }
+	@Override
+	public String toString() {
+		return "<Alunos: " 
+				+ this.getAlunos() 
+				+ "Classe: " + this.getClass()
+				 + ">";
+	}
 }

@@ -29,6 +29,8 @@ public class CursoTest {
                 
                 Curso c1 = new Curso(turmas ,"codigo");
                 Curso c2 = new Curso(turmas, "codigo");
+                System.out.println( c1.getTurmas());
+                System.out.println(c2.getTurmas());
 		//2. Execução
 		boolean resultado1 = c1.equals(c2);
 		boolean resultado2 = c2.equals(c1);
