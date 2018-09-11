@@ -8,5 +8,15 @@ public class Curso {
 	public Collection<Turma> getTurmas() {
 		return this.turmas;
 	}
+        private String codigo;
+
+    public Curso(Collection<Turma> turmas, String codigo) {
+        this.turmas = turmas;
+        this.codigo = codigo;
+    }
+
+    public String getCodigo() {
+        return codigo;
+    }
 
 }

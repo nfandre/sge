@@ -7,4 +7,8 @@ public class Turma {
 	public Collection<Aluno> getAlunos(){
 		return this.alunos;
 	}
+
+    public void setAlunos(Collection<Aluno> alunos) {
+        this.alunos = alunos;
+    }
 }
