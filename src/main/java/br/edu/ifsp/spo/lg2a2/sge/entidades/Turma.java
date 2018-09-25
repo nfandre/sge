@@ -8,9 +8,6 @@ public class Turma {
 		return this.alunos;
 	}
 
-    public void setAlunos(Collection<Aluno> alunos) {
-        this.alunos = alunos;
-    }
 	@Override
 	public String toString() {
 		return "<Alunos: " 
@@ -18,4 +15,9 @@ public class Turma {
 				+ "Classe: " + this.getClass()
 				 + ">";
 	}
+	public Turma (Collection<Aluno> alunos) {
+		this.alunos = alunos;
+	}
+	
+
 }

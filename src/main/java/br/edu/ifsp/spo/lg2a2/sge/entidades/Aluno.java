@@ -16,9 +16,7 @@ public class Aluno {
 	public String getNome() {
 		return nome;
 	}
-	public String getEmail() {
-		return email;
-	}
+
 	
 	public Aluno(String prontuario, String cpf, String nome, String email) {
 		this.prontuario = prontuario;

@@ -21,8 +21,7 @@ public class CursoTest {
                 Collection<Aluno> alunos = new ArrayList<Aluno>();
                 alunos.add(a);
                 alunos.add(b);
-                Turma t = new Turma();
-                t.setAlunos(alunos);
+                Turma t = new Turma(alunos);
                 
                 Collection<Turma> turmas = new ArrayList<Turma>();
                 turmas.add(t);

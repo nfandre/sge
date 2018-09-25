@@ -13,7 +13,7 @@ public class CursosRepository {
     public CursosRepository(){
         
     }
-    public CursosRepository(Collection<Aluno> alunos){
+    public CursosRepository(Collection<Curso> cursos){
         this.cursos.addAll(cursos);
     }
     
@@ -31,16 +31,18 @@ public class CursosRepository {
 
 	public Collection<Turma> buscarTurmas(String codigoCurso){
             Collection<Turma> turmas = new ArrayList<Turma>();
-            turmas = null;
             
+            turmas = null;
             for(Curso curso:CursosRepository.cursos){
                 if(curso.getCodigo().equals(codigoCurso)){
-                    turmas.add((Turma) curso.getTurmas());
+                    curso.getTurmas();
+                	turmas = curso.getTurmas();
                     break;
                 }
             }
             return turmas;
 	}
+	
 	
 	public Collection<Aluno> buscarAlunos(String codigoCurso){
 		Collection<Aluno> alunos = new ArrayList<Aluno>();
@@ -48,7 +50,7 @@ public class CursosRepository {
                 for(Curso curso:CursosRepository.cursos){
                     if(curso.getCodigo().equals(codigoCurso)){
                         Turma turma = (Turma) curso.getTurmas();
-                        alunos.add((Aluno) turma.getAlunos());
+                        alunos = turma.getAlunos();
                         break;
                     }
                 }
@@ -59,7 +61,5 @@ public class CursosRepository {
 		return false;
 	}
 	
-	public void adicionarAluno(Aluno aluno) {
-		
-	}
+
 }
